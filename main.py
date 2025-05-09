@@ -89,5 +89,5 @@ async def main():
         await fetch_and_send(bot)
         await asyncio.sleep(CHECK_INTERVAL)
 
-if __name__ == "main":
-    asyncio.run(main())
+if name == "main":
+    app.run(host="0.0.0.0", port=8000)
