@@ -69,7 +69,7 @@ async def fetch_and_send(bot):
         except Exception as fetch_error:
             print(f"خطا در دریافت فید: {fetch_error}")
 
-app = Flask(name)
+app = Flask(__name__)
 @app.route("/")
 def home():
     return "ربات فعال است."
@@ -89,5 +89,5 @@ async def main():
         await fetch_and_send(bot)
         await asyncio.sleep(CHECK_INTERVAL)
 
-if name == "main":
+if __name__ == "main":
     asyncio.run(main())
