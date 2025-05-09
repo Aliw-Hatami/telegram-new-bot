@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-news-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7686858863:AAHtXKHrzl1QtUqHtL52Vp8KyaMmSoDke2U
+      - key: CHAT_ID
+        value: @daijoplus
